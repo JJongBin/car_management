@@ -11,39 +11,56 @@
     <!-- CSS 초기화 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
     <link rel="stylesheet" href="./css/style.css" />
-
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 
 </head>
 <body>
     <div class="container">
         
         <!-- MAIN MENU -->
-        <header class="header">
+        <header id="header-menu">
             <div class="logo">
-                <img src="" alt="logo">
+                <!-- <img src="" alt="logo"> -->
                 <h2>Moters</h2>
             </div>
             <ul class="main-menu">
                 <li>
-                    <a href="javascript:void(0)">차량조회</a>
+                    <a href="javascript:void(0)">Home
+                        <img src="./img/arrow_drop_down_white_36dp.svg" alt="drop-down">
+                    </a>
                 </li>
                 <li>
-                    <a href="javascript:void(0)">재고</a>
+                    <a href="javascript:void(0)">차량조회
+                        <img src="./img/arrow_drop_down_white_36dp.svg" alt="drop-down">
+                    </a>
                 </li>
                 <li>
-                    <a href="javascript:void(0)">일정</a>
+                    <a href="javascript:void(0)">재고
+                        <img src="./img/arrow_drop_down_white_36dp.svg" alt="drop-down">
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">일정
+                        <img src="./img/arrow_drop_down_white_36dp.svg" alt="drop-down">
+                    </a>
                 </li>
             </ul>
-            <div id="search">
+            <!-- <div id="search">
                 <input type="text" placeholder=" 차량번호를 입력하세요"/>
-                <img src="" alt="돋보기">
-            </div>
+                <img src="./img/search_white_48dp.svg" alt="돋보기">
+            </div> -->
+            <div class="time">00:00</div>
         </header>
-
-
+        
+        
         <!-- MAIN CONTENTS -->
-        <section class="main">
-            
+        <section id="main">
+            <div class="header">
+                <form id="search">
+                    <input type="text" placeholder=" 차량번호를 입력하세요."/>
+                    <input type="submit" value=" " />
+                </form>
+            </div>
         </section>
 
     </div>
