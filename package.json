@@ -1,0 +1,30 @@
+{
+  "name": "7_car_management",
+  "version": "1.0.0",
+  "description": "이전에 만들었던 car management 재코딩",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JJongBin/car_management.git"
+  },
+  "author": "jongbin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JJongBin/car_management/issues"
+  },
+  "homepage": "https://github.com/JJongBin/car_management#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "html": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12",
+    "@babel/core": "^7.14.6",
+    "@babel/node": "^7.14.7",
+    "@babel/preset-env": "^7.14.7"
+  }
+}
