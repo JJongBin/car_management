@@ -18,6 +18,18 @@ a {
 .i-green {
     color: 	#32CD32;
 }
+.circle-graph-color-red {
+    color: #ff1300;
+    font-size: 30px;
+}
+.circle-graph-color-blue {
+    color: #00498c;
+    font-size: 30px;
+}
+.circle-graph-color-yellow {
+    color: #ffd400;
+    font-size: 30px;
+}
 
 
 
@@ -178,31 +190,29 @@ nav .menu .sub-menu {
 nav .menu .sub-menu li {
     color: rgb(200, 200, 200);
     display: flex;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 nav .menu .sub-menu li:first-child {
-    font-size: 20px;
-    padding: 10px 20px;
-}
-nav .menu .sub-menu li:first-child i{
-    margin: auto 0;
-    margin-right: 10px;
-}
-nav .menu .sub-menu li:first-child p:last-child{
-    font-size: 30px;
-    display: flex;
-    justify-content: center;
-    padding-top: 5px;
-}
-nav .menu .sub-menu li:last-child {
     cursor: pointer;
-    border-bottom: none;
     width: 100%;
     background-color: #191919;
     transition: background-color .3s;
 }
-nav .menu .sub-menu li:last-child:hover {
+nav .menu .sub-menu li:first-child:hover {
     background-color: rgb(50, 50, 50);
+}
+nav .menu .sub-menu li:last-child {
+    font-size: 20px;
+    padding: 10px 20px;
+}
+nav .menu .sub-menu li:last-child i{
+    margin: auto 0;
+    margin-right: 10px;
+}
+nav .menu .sub-menu li:last-child p:last-child{
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
 }
 nav .menu .sub-menu li i {
     margin-right: 20px;
@@ -231,8 +241,27 @@ article {
     overflow: hidden;
     /* background-color: rgb(245, 245, 245); */
 }   
-article .section-1 {
+article section {
     width: 100%;
+    padding: 20px 0;
+}
+article .item {
+    /* padding: 0 20px; */
+    /* background-color: rgb(40, 40, 40); */
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+}
+article .item-title {
+    font-weight: 600;
+    font-size: 18px;
+    padding: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+
+article .section-1 {
+    padding: 0;
+    padding-bottom: 20px;
 }
 article .section-1 .view {
     display: grid;
@@ -240,32 +269,96 @@ article .section-1 .view {
     column-gap: 40px;
     box-sizing: border-box;
 }
-article .section-1 .view .view-item {
-    /* padding: 0 20px; */
-    /* background-color: rgb(40, 40, 40); */
-    background-color: rgb(255, 255, 255);
-    border: 1px solid rgba(0, 0, 0, 0.15);
-}
-article .section-1 .view .view-item p {
-    font-weight: 600;
-    font-size: 18px;
-    padding: 15px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-}
-article .section-1 .view .view-item .increase {
+article .section-1 .view .item .increase {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-article .section-1 .view .view-item .increase p {
+article .section-1 .view .item .increase p {
     font-size: 25px;
     padding: 20px;
 }
-article .section-1 .view .view-item .increase i {
+article .section-1 .view .item .increase i {
     font-size: 20px;
     padding: 20px;
 }
 
+article .section-2 .graph {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    column-gap: 40px;
+}
+article .section-2 .graph .item {
+
+}
+article .section-2 .graph .item .graph-circle {
+    display: flex;
+    justify-content: space-between;
+}
+article .section-2 .graph .item .graph-circle .test{
+    margin: 30px;
+    /* width: 60%; */
+    display:inline-block;
+    position:relative;
+    width: 220px;
+    height: 220px;
+    background: conic-gradient(#ff1300 0% 25%, #00498c 25% 56%, #ffd400 56% 100%);
+    border-radius: 50%;
+}
+article .section-2 .graph .item .graph-circle .test .test-center{
+    position:absolute;
+    width:140px; 
+    height: 140px;
+    background :#fff;
+    border-radius: 50%;
+    top: 40px;
+    left: 40px;
+}
+article .section-2 .graph .item .graph-circle .test-data{
+    width: 30%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style-type : square;
+}
+article .section-2 .graph .item .graph-circle .test-data span {
+    font-size: 20px;
+    color: rgb(92, 95, 97);
+}
+article .section-2 .graph .item .graph-chart {
+    position: relative;
+}
+article .section-2 .graph .item .graph-chart .test2 {
+    margin: 30px auto;
+    width: 80%;
+    height: 250px;
+    /* background-color: #32CD32; */
+    border-bottom: 1px solid rgb(92, 95, 97);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 20px;
+
+}
+/* article .section-2 .graph .item .graph-chart .test2 .test2-bar {
+    position: absolute;
+    bottom: 0;
+} */
+article .section-2 .graph .item .graph-chart .test2 .test2-bar .bar{
+    margin: 0 auto;
+    width: 100%;
+    height: 50%;
+    background-color: #00498c;
+}
+article .section-2 .graph .item .graph-chart .test2 .test2-bar:nth-child(2n) .bar{
+    background-color: #ffd400;
+    height: 40%;
+}
+article .section-2 .graph .item .graph-chart .test2 .test2-bar:nth-child(3n) .bar{
+    background-color: #ff1300;
+    height: 70%;
+}
 
 
 
@@ -277,7 +370,7 @@ footer {
     width: 100%;
     height: 70px;
     z-index: 1;
-    background-color: rgb(40, 40, 40);
+    background-color: rgb(220, 220, 220);
     display: flex;
     justify-content: center;
     align-items: center;
