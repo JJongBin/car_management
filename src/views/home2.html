@@ -59,24 +59,36 @@
             <div class="menu">
                 <ul class="main-menu">
                     <li>
+                        <i class="fas fa-home"></i>
                         <a href="javascript:void(0)">Home</a>
                     </li>
                     <li>
+                        <i class="fas fa-search"></i>
+                        <a href="javascript:void(0)">검색</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-th-large"></i>
                         <a href="javascript:void(0)">재고관리</a>
                     </li>
                     <li>
+                        <i class="far fa-calendar-alt"></i>
                         <a href="javascript:void(0)">일정관리</a>
                     </li>
                 </ul>
                 
                 <ul class="sub-menu">
-                    <li>
-                        <i class="far fa-calendar-alt"></i>
-                        <p>calendar</p>
-                        <i class="fas fa-chevron-left" id="check-calender"></i>
+                    <!-- <li>
+                        <i class="far fa-comment-alt"></i>
+                        <p>Memo</p>
+                        <i class="fas fa-chevron-right" id="check-icon"></i>
                     </li>
                     <li>
-                        <i class="far fa-clock"></i>
+                        <i class="fas fa-list-ul"></i>
+                        <p>Today events</p>
+                        <i class="fas fa-chevron-left" id="check-icon"></i>
+                    </li> -->
+                    <li>
+                        <!-- <i class="far fa-clock"></i> -->
                         <div id="time">
                             <p>0000-00-00</p>
                             <p>00:00</p>
@@ -171,19 +183,48 @@
             </section>
             
 
+            <section class="section-3 ">
+                <div class="memo item">
+                    <div class="item-title">
+                        <p>Memo</p> 
+                        <button id="memo-post">post</button>
+                    </div>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="내용을 입력하세요."></textarea>
+                    
+                </div>
+
+                <div class="mini-calendar item">
+                    <div class="item-title">
+                        <p>Today Events</p>
+                        <div id="today">2021-08-19 (목)</div>
+                    </div>
+                    <ul class="events">
+                        <li><span>time</span>events</li>
+                        <li><span>12:00</span>event 1</li>
+                        <li><span>14:00</span>event 2</li>
+                        <li><span>17:30</span>event 3</li>
+                        <li><span>19:00</span>event 4</li>
+                        <li><span>19:00</span>event 4</li>
+                        <li><span>19:00</span>event 4</li>
+                        <li><span>19:00</span>event 4</li>
+                    </ul>
+                </div>
+            </section>
+            
 
 
 
 
 
-            <footer>
+
+            <!-- <footer>
                 <span>- footer -</span> 
-            </footer>
+            </footer> -->
         </article>
 
-        <div id="events">
+        <!-- <div id="events">
             <i class="far fa-calendar-alt"></i>
-        </div>
+        </div> -->
 
     </div>
     
