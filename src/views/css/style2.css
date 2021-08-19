@@ -168,48 +168,35 @@ nav .menu .main-menu li:hover a {
 }
 
 
-nav .menu .sub-menu {
+nav #time {
     position: absolute;
     width: 100%;
     bottom: 0;
-}
-nav .menu .sub-menu li {
+    padding: 20px;
+    box-sizing: border-box;
     color: rgb(200, 200, 200);
     display: flex;
     justify-content: center;
+    flex-direction: column;
     background-color: #191919;
 }
-/* nav .menu .sub-menu li:not(:last-child){
-    cursor: pointer;
-    width: 100%;
-    transition: background-color .3s;
-}
-nav .menu .sub-menu li:not(:last-child):hover {
-    background-color: rgb(50, 50, 50);
-} */
-nav .menu .sub-menu li:last-child {
+nav #time p {
     font-size: 20px;
-    padding: 10px 20px;
-    margin-top: 60px;
-}
-nav .menu .sub-menu li:last-child i{
-    margin: auto 0;
-    margin-right: 10px;
-}
-nav .menu .sub-menu li:last-child p:last-child{
-    font-size: 30px;
     display: flex;
     justify-content: center;
+}
+nav #time .clock {
     padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-nav .menu .sub-menu li i {
-    margin-right: 20px;
-} 
-#check-icon {
-    position: absolute;
-    right: -5px;
-    color: #fff;
+nav #time .clock p:last-child {
+    font-size: 35px;
+    padding-left: 10px;
 }
+
+
 
 
 /* MAIN CONTENTS */
@@ -284,10 +271,10 @@ article .section-2 .graph .item {
 article .section-2 .graph .item .graph-circle {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 article .section-2 .graph .item .graph-circle .test{
-    margin: 30px;
-    /* width: 60%; */
+    margin: 40px;
     display:inline-block;
     position:relative;
     width: 220px;
