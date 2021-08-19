@@ -1,0 +1,36 @@
+
+#search {
+    height: 60px;
+    width: 220px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    box-sizing: border-box;
+}
+#search input {
+    all: unset;
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    background-color: transparent;
+    color: #fff;
+    box-sizing: border-box;
+    background-color: #000;
+}
+#search input::placeholder {
+    color: #fff;
+    font-size: 15px;
+}
+#search .search-btn {
+    all: unset;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    margin: 10px 0;
+
+}

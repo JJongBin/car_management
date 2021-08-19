@@ -23,6 +23,9 @@ app.use(express.static(path.join(__dirname, 'views')));
 app.get("/", function(req, res) {
     res.sendFile(__dirname + "/views/home2.html");
 });
+app.get("/search/", function(req, res) {
+    res.sendFile(__dirname + "/views/search.html");
+});
 
 
 // app.use("/", rootRouter);
