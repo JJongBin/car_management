@@ -26,6 +26,12 @@ app.get("/", function(req, res) {
 app.get("/search/", function(req, res) {
     res.sendFile(__dirname + "/views/search.html");
 });
+app.get("/calendar/", function(req, res) {
+    res.sendFile(__dirname + "/views/calendar.html");
+});
+app.get("/parts/", function(req, res) {
+    res.sendFile(__dirname + "/views/parts.html");
+});
 
 
 // app.use("/", rootRouter);
