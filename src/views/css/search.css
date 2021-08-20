@@ -55,9 +55,10 @@ article #data-container table th {
     padding: 15px 30px;
     border-bottom: 2px solid rgba(0, 0, 0, 0.2);
     /* border-top: 1px solid rgba(0, 0, 0, 0.2); */
-    background-color: rgb(210, 215, 220);
+    /* background-color: rgb(210, 215, 220); */
+    background-color: #191919;
     font-weight: 500;
-    color: #000;
+    color: #fff;
 }
 article #data-container table th:first-child {
     border-radius: 10px 0 0 0;
@@ -70,7 +71,7 @@ article #data-container table tr {
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 article #data-container table tr:hover {
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(220, 220, 220);
 }
 article #data-container table tr:last-child td:first-child {
     border-radius: 0 0 0 10px;

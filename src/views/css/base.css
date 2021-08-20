@@ -107,11 +107,6 @@ nav .menu {
     height: 100%;
     box-sizing: border-box;
 }
-nav .menu .main-menu {
-    /* padding: 10px 10px; */
-    /* border-top: 1px solid rgb(100, 100, 100); */
-    
-}
 nav .menu li {
     font-size: 18px;
     width: 100%;

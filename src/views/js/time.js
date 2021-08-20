@@ -9,9 +9,12 @@ function getDate() {
     // let day = String(today.getDay()).padStart(2, "0");  // 요일
     time[0].innerText = `${year}-${month}-${date}`;
     
-    let amPm = 'A.M';
-    let hours = today.getHours(); // 시
-    if (!hours <= 12) {
+    let amPm;
+    let hours = today.getHours(); //
+    if (hours <= 12) {
+        amPm = 'A.M';
+        hours = String(hours+12).padStart(2, "0"); 
+    } else {
         amPm = 'P.M';
         hours = String(hours-12).padStart(2, "0"); 
     }
