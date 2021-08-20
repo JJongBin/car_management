@@ -45,6 +45,7 @@ article .section-1 .calender .calender-month .control-month{
     background-color: rgb(32, 32, 32);
 }
 article .section-1 .calender .calender-month .control-month .month{
+    color: #fff;
     width: 100%;
     line-height: 80px;
     text-align: center;
@@ -52,6 +53,10 @@ article .section-1 .calender .calender-month .control-month .month{
 article .section-1 .calender .calender-month .control-month .material-icons{
     font-size: 50px !important;
     cursor: pointer;
+    color: rgb(200, 200, 200);
+}
+article .section-1 .calender .calender-month .control-month .material-icons:hover{
+    color: #fff;
 }
 article .section-1 .calender .calender-month .control-month .material-icons.prev{
     margin: auto 0;

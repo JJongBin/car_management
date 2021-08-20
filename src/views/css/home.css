@@ -65,9 +65,9 @@ article .section-2 .graph {
     grid-template-columns: 1fr 1.5fr;
     column-gap: 40px;
 }
-article .section-2 .graph .item {
+/* article .section-2 .graph .item {
 
-}
+} */
 article .section-2 .graph .item .graph-circle {
     display: flex;
     justify-content: space-between;

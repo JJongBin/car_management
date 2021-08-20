@@ -155,8 +155,11 @@ nav #time .clock {
     justify-content: center;
     align-items: center;
 }
+nav #time .clock p{
+    font-size: 15px; 
+}
 nav #time .clock p:last-child {
-    font-size: 35px;
+    font-size: 40px;
     padding-left: 10px;
 }
 
