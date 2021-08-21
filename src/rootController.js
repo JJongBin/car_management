@@ -25,13 +25,13 @@ export const home = (req, res) => {
 
 export const search = async (req, res) => {
   const cars = await Car.find({});
-  console.log(cars)
+  // console.log(cars);
   res.render("search.ejs", {datas: cars});
 }
 
 export const postSearch = async (req, res) => {
   const {number, i_number, car_name, owner, phone} = req.body;
-
+  
   try {
     const newCar = await Car.create({
       number, 
@@ -41,9 +41,11 @@ export const postSearch = async (req, res) => {
       phone
     });
     // user.save();
-    return res.redirect("search.ejs");
+    const cars = await Car.find({});
+    return res.render("search.ejs", {datas: cars});
   }
   catch(error){
+    console.log(error)
     return res.status(400).render("search.ejs");
   }
 }

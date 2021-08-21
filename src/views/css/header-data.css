@@ -12,7 +12,7 @@ header .data{
 header .data .data-btn{
     all: unset;
     height: 35px;
-    width: 100px;
+    /* width: 100px; */
     background-color: rgb(240, 240, 240);
     background-color: #212121;
     border: 2px solid rgb(200, 200, 200);
@@ -24,9 +24,12 @@ header .data .data-btn{
     cursor: pointer;
     transition: all .3s;
     margin-left: 20px;
+    padding: 0 10px;
 }
 header .data .data-btn:hover {
     background-color: #fff;
     color: #000;
 }
-
+#data-add {
+    width: auto;
+}

@@ -7,6 +7,7 @@
 
     <!-- JS -->
     <script defer src="./js/time.js"></script>
+    <script defer src="./js/search.js"></script>
     <script src="https://kit.fontawesome.com/818834dbf2.js" crossorigin="anonymous"></script>
 
     <!-- CSS 초기화 -->
@@ -29,9 +30,9 @@
                 <span>Management</span>
             </div>
             <div class="data">
-                <button class="data-btn data-add">차량 추가</button>
-                <button class="data-btn data-modify">차량 수정</button>
-                <button class="data-btn data-delete">차량 삭제</button>
+                <button id="data-add" class="data-btn">Open 차량 추가</button>
+                <button id="data-modify" class="data-btn">차량 수정</button>
+                <button id="data-delete" class="data-btn ">차량 삭제</button>
             </div>
   
         </header>
@@ -94,12 +95,15 @@
                 </form>
             </section>
             
-            <section class="">
+            <section id="data-add-section" class="hide">
                 <div id="data-form">
+                    <button id="add-close-btn">Close</button>
                     <form method="POST">
                         <div>
                             <span>차량 등록</span>
-                            <button>추가하기</button>
+                            <div>
+                                <button>추가하기</button>
+                            </div>
                         </div>
                         <div>
                             <input name="number", placeholder="차량번호", required, type="text">
