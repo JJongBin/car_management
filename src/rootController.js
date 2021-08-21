@@ -23,8 +23,10 @@ export const home = (req, res) => {
   res.render("home2.ejs")
 }
 
-export const search = (req, res) => {
-  res.render("search.ejs");
+export const search = async (req, res) => {
+  const cars = await Car.find({});
+  console.log(cars)
+  res.render("search.ejs", {datas: cars});
 }
 
 export const postSearch = async (req, res) => {
@@ -39,7 +41,7 @@ export const postSearch = async (req, res) => {
       phone
     });
     // user.save();
-    return res.render("search.ejs");
+    return res.redirect("search.ejs");
   }
   catch(error){
     return res.status(400).render("search.ejs");
