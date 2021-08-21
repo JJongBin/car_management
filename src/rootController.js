@@ -5,9 +5,31 @@ import History from "./models/History";
 export const home = (req, res) => {
   res.sendFile(__dirname + "/views/home2.html")
 }
+
 export const search = (req, res) => {
   res.sendFile(__dirname + "/views/search.html");
 }
+export const postSearch = async (req, res) => {
+  const {number, i_number, car_name, owner, phone} = req.body;
+
+  try {
+    const newCar = await Car.create({
+      number, 
+      i_number, 
+      car_name, 
+      owner, 
+      phone
+    });
+    // user.save();
+    return res.sendFile(__dirname + "/views/search.html");
+  }
+  catch(error){
+    return res.status(400).sendFile(__dirname + "/views/search.html");
+  }
+}
+
+
+
 export const calendar = (req, res) => {
   res.sendFile(__dirname + "/views/calendar.html");
 }

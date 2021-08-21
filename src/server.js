@@ -6,7 +6,7 @@ import { localsMiddleware } from "./middlewares";
 import "./db";
 import Car from "./models/Car";
 import History from "./models/History";
-import { home, search, calendar, parts } from "./rootController"
+import { home, search, postSearch, calendar, parts } from "./rootController"
 
 const PORT = 4000
 
@@ -17,12 +17,12 @@ const express = require("express");
 const app = express(); 
 
 app.use(express.static(path.join(__dirname, 'views')));
-
+app.use(express.urlencoded({ extended: true })); 
 
 app.get("/", home);
-app.get("/search/", search);
-app.get("/calendar/", calendar);
-app.get("/parts/", parts);
+app.route("/search").get(search).post(postSearch);
+app.get("/calendar", calendar);
+app.get("/parts", parts);
 
 
 const handleListening = () => {
