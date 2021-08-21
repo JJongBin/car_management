@@ -2,13 +2,31 @@ import Car from "./models/Car";
 import History from "./models/History";
 
 
+// export const home = (req, res) => {
+//   res.sendFile(__dirname + "/views/home2.html")
+// }
+// export const search = (req, res) => {
+//   res.sendFile(__dirname + "/views/search.html");
+// }
+// export const calendar = (req, res) => {
+//   res.sendFile(__dirname + "/views/calendar.html");
+// }
+// export const parts = (req, res) => {
+//   res.sendFile(__dirname + "/views/parts.html");
+// }
+
+    
+    
+    
+    
 export const home = (req, res) => {
-  res.sendFile(__dirname + "/views/home2.html")
+  res.render("home2.ejs")
 }
 
 export const search = (req, res) => {
-  res.sendFile(__dirname + "/views/search.html");
+  res.render("search.ejs");
 }
+
 export const postSearch = async (req, res) => {
   const {number, i_number, car_name, owner, phone} = req.body;
 
@@ -21,20 +39,19 @@ export const postSearch = async (req, res) => {
       phone
     });
     // user.save();
-    return res.sendFile(__dirname + "/views/search.html");
+    return res.render("search.ejs");
   }
   catch(error){
-    return res.status(400).sendFile(__dirname + "/views/search.html");
+    return res.status(400).render("search.ejs");
   }
 }
 
-
-
-export const calendar = (req, res) => {
-  res.sendFile(__dirname + "/views/calendar.html");
-}
 export const parts = (req, res) => {
-  res.sendFile(__dirname + "/views/parts.html");
+  res.render("parts.ejs");
 }
+export const calendar = (req, res) => {
+  res.render("calendar.ejs");
+}
+
 
 

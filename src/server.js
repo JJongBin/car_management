@@ -10,11 +10,12 @@ import { home, search, postSearch, calendar, parts } from "./rootController"
 
 const PORT = 4000
 
-
 const express = require("express");
 
 
 const app = express(); 
+app.set('view engine','ejs');  
+app.set('views', path.join(__dirname, '/views'))
 
 app.use(express.static(path.join(__dirname, 'views')));
 app.use(express.urlencoded({ extended: true })); 

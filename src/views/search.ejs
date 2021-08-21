@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- JS -->
+    <script defer src="./js/time.js"></script>
+    <script src="https://kit.fontawesome.com/818834dbf2.js" crossorigin="anonymous"></script>
+
+    <!-- CSS 초기화 -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/search.css" />
+    <link rel="stylesheet" href="./css/header-data.css" />
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+</head>
+<body>
+    <div class="container">
+        
+        <!-- MAIN MENU -->
+        <header>
+            <div class="logo">
+                <!-- <img src="" alt="logo"> -->
+                <span>Management</span>
+            </div>
+            <div class="data">
+                <button class="data-btn data-add">차량 추가</button>
+                <button class="data-btn data-modify">차량 수정</button>
+                <button class="data-btn data-delete">차량 삭제</button>
+            </div>
+  
+        </header>
+
+
+        <!-- NAV -->
+        <nav>
+            <div class="menu">
+                <ul class="main-menu">
+                    <li>
+                        <a href="/"><i class="fas fa-home"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/search">
+                            <i class="fas fa-search"></i>
+                            검색
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/parts">
+                            <i class="fas fa-th-large"></i>
+                            재고관리
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/calendar">
+                            <i class="far fa-calendar-alt"></i>
+                            일정관리
+                        </a>
+                    </li>
+                </ul>
+                
+                
+                <div id="time">
+                    <p>0000-00-00</p>
+                    <div class="clock">
+                        <p>AM </p>
+                        <p>00:00</p>
+                    </div>
+                </div>
+                    
+                
+
+            </div>
+        </nav>
+        
+
+        <!-- MAIN CONTENTS -->
+        <article>
+            <section class="section-1">
+                <form id="search">
+                    <input type="text" placeholder=" Search"/>
+                    <button class="search-btn">
+                        <a href="javascript:void(0)">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </button>
+                </form>
+            </section>
+            
+            <section class="">
+                <div id="data-form">
+                    <form method="POST">
+                        <div>
+                            <span>차량 등록</span>
+                            <button>추가하기</button>
+                        </div>
+                        <div>
+                            <input name="number", placeholder="차량번호", required, type="text">
+                            <input name="i_number", placeholder="차대번호", required, type="text">
+                            <input name="car_name", placeholder="차종", required, type="text">
+                            <input name="owner", placeholder="차주", type="text">
+                            <input name="phone", placeholder="연락처", type="text">
+                        </div>
+                    </form>
+                </div>
+            </section>
+            
+
+            <section class="section-2">
+                <div id="data-container" class="item">
+                    <table >
+                        <th></th>
+                        <th>차량번호</th>
+                        <th>차대번호</th>
+                        <th>차종</th>
+                        <th>차주</th>
+                        <th>연락처</th>
+                        <th>이력</th>
+                        <!-- <tr>
+                            <td>123123</td>
+                        </tr> -->
+                        <tr>
+                            <td><input type="checkbox" name="x" value="y"></td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>1</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="x" value="y"></td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="x" value="y"></td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>3</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="x" value="y"></td>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>4</td>
+                            <td>4</td>
+                        </tr>
+                        </table>
+                </div>
+            </section>
+            
+
+
+
+
+
+
+        </article>
+
+        <!-- <div id="todayBtn">
+            <i class="far fa-calendar-alt"></i>
+        </div> -->
+
+    </div>
+    
+</body>
+</html>
