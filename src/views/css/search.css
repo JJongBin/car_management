@@ -128,6 +128,19 @@ article #data-container {
     /* padding: 30px; */
     border-radius: 10px;
 }
+article #data-container .btnBox{
+    position: absolute;
+    top: 0%;
+    right: 0;
+    z-index: 10;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
 article #data-container table {
     border-radius: 10px;
     width: 100%;

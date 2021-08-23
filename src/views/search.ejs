@@ -30,9 +30,9 @@
                 <span>Management</span>
             </div>
             <div class="data">
-                <button id="data-add" class="data-btn">Open 차량 추가</button>
-                <button id="data-modify" class="data-btn">차량 수정</button>
-                <button id="data-delete" class="data-btn">차량 삭제</button>
+                <!-- <button id="data-add" class="data-btn">Open 차량 추가</button> -->
+                <!-- <button id="data-modify" class="data-btn">차량 수정</button>
+                <button id="data-delete" class="data-btn">차량 삭제</button> -->
             </div>
   
         </header>
@@ -119,19 +119,21 @@
 
             <section class="section-2">
                 <div id="data-container" class="item">
-                    <form method="POST" , action="/search/delete">
-                        <button id="data-delete" class="data-btn">차량 삭제</button>
+                    <form method="POST">
+                        <div class="btnBox">
+                            <div id="data-add" class="data-btn">Open 차량 추가</div>
+                            <button id="data-modify" class="data-btn">차량 수정</button>
+                            <button id="data-delete" class="data-btn" formaction="/search/delete">차량 삭제</button>
+                        </div>
                         <table >
-                            <th><input type="reset" value="Reset"></th>
+                            <th><input id="checkAll" type="checkbox" name="all" value="true"></th>
                             <th>차량번호</th>
                             <th>차대번호</th>
                             <th>차종</th>
                             <th>차주</th>
                             <th>연락처</th>
                             <th>이력</th>
-                            <!-- <tr>
-                                <td>123123</td>
-                            </tr> -->
+
                             <% for(let i=0; i < datas.length ; i++){ %>
                                 <tr>
                                     <td><input type="checkbox" name="target" value=<%=datas[i]._id%>></td>
@@ -143,42 +145,6 @@
                                     <td><%=datas[i].history%></td>
                                 </tr>
                             <% } %>
-                            <tr>
-                                <td><input type="checkbox" name="x" value="y"></td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox" name="x" value="y"></td>
-                                <td>2</td>
-                                <td>2</td>
-                                <td>2</td>
-                                <td>2</td>
-                                <td>2</td>
-                                <td>2</td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox" name="x" value="y"></td>
-                                <td>3</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <td>3</td>
-                                <td>3</td>
-                            </tr>
-                            <tr>
-                                <td><input type="checkbox" name="x" value="y"></td>
-                                <td>4</td>
-                                <td>4</td>
-                                <td>4</td>
-                                <td>4</td>
-                                <td>4</td>
-                                <td>4</td>
-                            </tr>
                             </table>
                     </form>
                 </div>

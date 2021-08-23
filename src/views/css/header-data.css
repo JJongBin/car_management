@@ -1,6 +1,6 @@
 header .data{
     position: absolute;
-    right: 0;
+    right: 250px;
     /* width: 100px; */
     height: 60px;
     display: flex;
@@ -8,8 +8,9 @@ header .data{
     align-items: center;
     padding: 10px;
     box-sizing: border-box;
+    
 }
-header .data .data-btn{
+.data-btn{
     all: unset;
     height: 35px;
     /* width: 100px; */
@@ -25,12 +26,15 @@ header .data .data-btn{
     transition: all .3s;
     margin-left: 20px;
     padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-header .data .data-btn a {
+.data-btn a {
     all: unset;
 }
 /* header .data .data-btn:hover a, */
-header .data .data-btn:hover {
+.data-btn:hover {
     background-color: #fff;
     color: #000;
 }

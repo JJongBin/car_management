@@ -23,14 +23,25 @@ searchBtn.addEventListener("click", handleAddBox)
 
 // DELETE
 
-const deleteBtn = document.getElementById("data-delete");
+// const deleteBtn = document.getElementById("data-delete");
 
-const handleDelete = () => {
-    const check = document.querySelectorAll("input[name=target]:checked");
-    console.log(check)
+// const handleDelete = () => {
+//     const check = document.querySelectorAll("input[name=target]:checked");
+//     console.log(check)
+//     check.forEach((checkCar) => {
+//         console.log(checkCar.value);
+//     })
+// }
+// deleteBtn.addEventListener("click", handleDelete)
+
+
+// CHECK BOX
+const checkAll = document.getElementById("checkAll");
+// console.log(checkAll.checked);
+
+checkAll.addEventListener("click", function () {
+    const check = document.querySelectorAll("input[name=target]");
     check.forEach((checkCar) => {
-        console.log(checkCar.value);
+        checkCar.checked = checkAll.checked;
     })
-}
-deleteBtn.addEventListener("click", handleDelete)
-
+})
