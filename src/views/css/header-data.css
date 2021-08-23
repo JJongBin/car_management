@@ -26,6 +26,10 @@ header .data .data-btn{
     margin-left: 20px;
     padding: 0 10px;
 }
+header .data .data-btn a {
+    all: unset;
+}
+/* header .data .data-btn:hover a, */
 header .data .data-btn:hover {
     background-color: #fff;
     color: #000;

@@ -41,14 +41,35 @@ export const postSearch = async (req, res) => {
       phone
     });
     // user.save();
-    const cars = await Car.find({});
-    return res.render("search.ejs", {datas: cars});
+    return res.redirect("/search");
   }
   catch(error){
     console.log(error)
-    return res.status(400).render("search.ejs");
+    return res.status(400).redirect("/search");
   }
 }
+
+
+
+export const carDelete = async (req, res) => {
+  let {target} = req.body;
+
+  if (typeof target === "string") {
+    await Car.findByIdAndDelete(target);
+    
+  } else {
+    for (let i = 0; i<target.length; i++) {
+      await Car.findByIdAndDelete(target[i]);
+    }
+  }
+  
+  const cars = await Car.find({});
+  return res.redirect("/search");
+}
+
+
+
+
 
 export const parts = (req, res) => {
   res.render("parts.ejs");

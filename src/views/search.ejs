@@ -32,7 +32,7 @@
             <div class="data">
                 <button id="data-add" class="data-btn">Open 차량 추가</button>
                 <button id="data-modify" class="data-btn">차량 수정</button>
-                <button id="data-delete" class="data-btn ">차량 삭제</button>
+                <button id="data-delete" class="data-btn">차량 삭제</button>
             </div>
   
         </header>
@@ -119,65 +119,68 @@
 
             <section class="section-2">
                 <div id="data-container" class="item">
-                    <table >
-                        <th></th>
-                        <th>차량번호</th>
-                        <th>차대번호</th>
-                        <th>차종</th>
-                        <th>차주</th>
-                        <th>연락처</th>
-                        <th>이력</th>
-                        <!-- <tr>
-                            <td>123123</td>
-                        </tr> -->
-                        <% for(let i=0; i < datas.length ; i++){ %>
+                    <form method="POST" , action="/search/delete">
+                        <button id="data-delete" class="data-btn">차량 삭제</button>
+                        <table >
+                            <th><input type="reset" value="Reset"></th>
+                            <th>차량번호</th>
+                            <th>차대번호</th>
+                            <th>차종</th>
+                            <th>차주</th>
+                            <th>연락처</th>
+                            <th>이력</th>
+                            <!-- <tr>
+                                <td>123123</td>
+                            </tr> -->
+                            <% for(let i=0; i < datas.length ; i++){ %>
+                                <tr>
+                                    <td><input type="checkbox" name="target" value=<%=datas[i]._id%>></td>
+                                    <td><%=datas[i].number%></td>
+                                    <td><%=datas[i].i_number%></td>
+                                    <td><%=datas[i].car_name%></td>
+                                    <td><%=datas[i].owner%></td>
+                                    <td><%=datas[i].phone%></td>
+                                    <td><%=datas[i].history%></td>
+                                </tr>
+                            <% } %>
                             <tr>
                                 <td><input type="checkbox" name="x" value="y"></td>
-                                <td><%=datas[i].number%></td>
-                                <td><%=datas[i].i_number%></td>
-                                <td><%=datas[i].car_name%></td>
-                                <td><%=datas[i].owner%></td>
-                                <td><%=datas[i].phone%></td>
-                                <td><%=datas[i].history%></td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
                             </tr>
-                        <% } %>
-                        <tr>
-                            <td><input type="checkbox" name="x" value="y"></td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="x" value="y"></td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2</td>
-                            <td>2</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="x" value="y"></td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>3</td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox" name="x" value="y"></td>
-                            <td>4</td>
-                            <td>4</td>
-                            <td>4</td>
-                            <td>4</td>
-                            <td>4</td>
-                            <td>4</td>
-                        </tr>
-                        </table>
+                            <tr>
+                                <td><input type="checkbox" name="x" value="y"></td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="x" value="y"></td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>3</td>
+                                <td>3</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" name="x" value="y"></td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                                <td>4</td>
+                            </tr>
+                            </table>
+                    </form>
                 </div>
             </section>
             

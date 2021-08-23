@@ -10,7 +10,8 @@ a {
     color: #fff;
 }
 .hide {
-    display: none;
+    display: none !important;
+    transition: all .3s;
 }
 .i-red {
     color: #ff1300;
