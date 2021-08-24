@@ -182,12 +182,75 @@ article #data-container table tr td {
     text-align: center;
     font-size: 18px;
     padding: 15px 0;
+    height: 50px;
+    box-sizing: border-box;
+}
+article #data-container table .updatedTr{
+    background-color: rgb(240, 240, 240);
+}
+article #data-container table tr .updated {
+    padding: 8px 0;
 }
 article #data-container table tr input:not([type=checkbox]) {
     all: unset;
-    padding: 5px;
-    /* background-color: blueviolet; */
-    width: 50px;
-    height: 100%;
-    border: 1px solid rgb(220, 220, 220);
+    padding: 3px;
+    width: 200px;
+    height: 34px;
+    border: 1.5px solid rgb(140, 140, 140);
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #fff;
+    color: #000;
+}
+
+
+
+
+/* UPDATE-BOX */
+article #update-box .data-btn {
+    margin: 20px 100px;
+    width: 200px;
+    border: none;
+    color: #191919;
+    font-weight: 600;
+}
+article #update-box .data-btn:first-child { 
+    background-color: forestgreen;
+    color: #fff;
+}
+article #update-box .data-btn:first-child:hover { 
+    background-color: greenyellow;
+    color: #191919;
+}
+article #update-box .data-btn:last-child { 
+    background-color: orangered;
+    color: #fff;
+}
+article #update-box .data-btn:last-child:hover { 
+    background-color: orange ;
+    color: #191919;
+}
+#update-box {
+    position: relative;
+    width: 100%;
+    /* height: 20%; */
+    background-color:#191919;
+    /* background-color:#fff; */
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    
+}
+#update-box .felx-box {
+    display: flex;
+    justify-content: center;
+}
+#update-box span {
+    font-size: 20px;
+    font-weight: 700;
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
