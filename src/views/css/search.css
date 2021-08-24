@@ -186,16 +186,16 @@ article #data-container table tr td {
     box-sizing: border-box;
 }
 article #data-container table .updatedTr{
-    background-color: rgb(240, 240, 240);
+    background-color: lightblue !important;
 }
-article #data-container table tr .updated {
-    padding: 8px 0;
+article #data-container table tr .updatedTd {
+    padding: 10px 0;
 }
 article #data-container table tr input:not([type=checkbox]) {
     all: unset;
     padding: 3px;
     width: 200px;
-    height: 34px;
+    height: 30px;
     border: 1.5px solid rgb(140, 140, 140);
     border-radius: 5px;
     box-sizing: border-box;
