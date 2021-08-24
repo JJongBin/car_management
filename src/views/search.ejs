@@ -29,11 +29,11 @@
                 <!-- <img src="" alt="logo"> -->
                 <span>Management</span>
             </div>
-            <div class="data">
-                <!-- <button id="data-add" class="data-btn">Open 차량 추가</button> -->
-                <!-- <button id="data-modify" class="data-btn">차량 수정</button>
-                <button id="data-delete" class="data-btn">차량 삭제</button> -->
-            </div>
+            <!-- <div class="data">
+                <button id="data-add" class="data-btn">Open 차량 추가</button>
+                <button id="data-modify" class="data-btn">차량 수정</button>
+                <button id="data-delete" class="data-btn">차량 삭제</button>
+            </div> -->
   
         </header>
 
@@ -122,7 +122,8 @@
                     <form method="POST">
                         <div class="btnBox">
                             <div id="data-add" class="data-btn">Open 차량 추가</div>
-                            <button id="data-modify" class="data-btn">차량 수정</button>
+                            <!-- <button id="data-update" class="data-btn" formaction="/search/update">차량 수정</button> -->
+                            <div id="data-update" class="data-btn" >차량 수정</div>
                             <button id="data-delete" class="data-btn" formaction="/search/delete">차량 삭제</button>
                         </div>
                         <table >
@@ -135,7 +136,7 @@
                             <th>이력</th>
 
                             <% for(let i=0; i < datas.length ; i++){ %>
-                                <tr>
+                                <tr class="data">
                                     <td><input type="checkbox" name="target" value=<%=datas[i]._id%>></td>
                                     <td><%=datas[i].number%></td>
                                     <td><%=datas[i].i_number%></td>

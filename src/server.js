@@ -6,7 +6,7 @@ import { localsMiddleware } from "./middlewares";
 import "./db";
 import Car from "./models/Car";
 import History from "./models/History";
-import { home, search, postSearch, calendar, parts, carDelete } from "./rootController"
+import { home, search, postSearch, calendar, parts, carDelete, carUpdate } from "./rootController"
 
 const PORT = 4000
 
@@ -23,6 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/", home);
 app.route("/search").get(search).post(postSearch);
 app.route("/search/delete").post(carDelete);
+// app.route("/search/update").post(carUpdate);
 app.get("/calendar", calendar);
 app.get("/parts", parts);
 

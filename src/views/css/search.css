@@ -181,5 +181,13 @@ article #data-container table tr:last-child {
 article #data-container table tr td {
     text-align: center;
     font-size: 18px;
-    padding: 12px 0;
+    padding: 15px 0;
+}
+article #data-container table tr input:not([type=checkbox]) {
+    all: unset;
+    padding: 5px;
+    /* background-color: blueviolet; */
+    width: 50px;
+    height: 100%;
+    border: 1px solid rgb(220, 220, 220);
 }

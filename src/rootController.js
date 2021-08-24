@@ -25,7 +25,7 @@ export const home = (req, res) => {
 
 export const search = async (req, res) => {
   const cars = await Car.find({});
-  // console.log(cars);
+  console.log(cars.history);
   res.render("search.ejs", {datas: cars});
 }
 
@@ -67,8 +67,10 @@ export const carDelete = async (req, res) => {
   return res.redirect("/search");
 }
 
-
-
+export const carUpdate = async (req, res) => {
+  let {target} = req.body;
+  console.log(target);
+}
 
 
 export const parts = (req, res) => {
