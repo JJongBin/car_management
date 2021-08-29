@@ -23,7 +23,7 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/", home);
 app.route("/search").get(search).post(postSearch);
 app.route("/search/delete").post(carDelete);
-// app.route("/search/update").post(carUpdate);
+app.route("/search/update").post(carUpdate);
 app.get("/calendar", calendar);
 app.get("/parts", parts);
 

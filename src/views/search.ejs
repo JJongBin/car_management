@@ -116,23 +116,21 @@
                 </div>
             </section>
             
-            <section id="data-update-section" class="hide">
-            <!-- <section id="data-update-section" class="hide"> -->
-                <div id="update-box">
-                    <span>UPDATE</span>
-                    <div class="felx-box">
-                        <div class="data-btn">Save</div>
-                        <div id="update-close" class="data-btn">cancle</div>
-                    </div>
-                </div>
-            </section>
-
+            
             <section class="section-2">
                 <div id="data-container" class="item">
                     <form method="POST">
+                        <div id="data-update-div" class="hide">
+                            <div id="update-box">
+                                <span>UPDATE</span>
+                                <div class="felx-box">
+                                    <button class="data-btn" formaction="/search/update">Save</button>
+                                    <div id="update-close" class="data-btn">cancle</div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="btnBox">
                             <div id="data-add" class="data-btn">Open 차량 추가</div>
-                            <!-- <button id="data-update" class="data-btn" formaction="/search/update">차량 수정</button> -->
                             <div id="data-update" class="data-btn" >차량 수정</div>
                             <button id="data-delete" class="data-btn" formaction="/search/delete">차량 삭제</button>
                         </div>

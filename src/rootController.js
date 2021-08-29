@@ -25,7 +25,7 @@ export const home = (req, res) => {
 
 export const search = async (req, res) => {
   const cars = await Car.find({});
-  console.log(cars.history);
+  // console.log(cars.history);
   res.render("search.ejs", {datas: cars});
 }
 
@@ -67,9 +67,30 @@ export const carDelete = async (req, res) => {
   return res.redirect("/search");
 }
 
+const carDataUpadte = async (id, number, i_number, car_name, owner, phone) => {
+  
+  await Car.findByIdAndUpdate(id, {
+    number, 
+    i_number, 
+    car_name, 
+    owner, 
+    phone
+  });
+}
+
 export const carUpdate = async (req, res) => {
   let {target} = req.body;
-  console.log(target);
+  const {number, i_number, car_name, owner, phone} = req.body;
+
+  if (target instanceof Array) {
+    for (let i = 0; i < target.length; i++) {
+      await carDataUpadte(target[i], number[i], i_number[i], car_name[i], owner[i], phone[i]);
+    };
+  } else {
+    await carDataUpadte(target, number, i_number, car_name, owner, phone);
+  }
+  
+  return res.redirect("/search");
 }
 
 

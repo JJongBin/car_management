@@ -24,7 +24,7 @@ searchBtn.addEventListener("click", handleAddBox)
 const updateBtn = document.getElementById("data-update");
 const updateTarget = document.querySelectorAll(".data");
 const dataBox = document.querySelector(".btnBox");
-const updateBox = document.getElementById("data-update-section");
+const updateBox = document.getElementById("data-update-div");
 const closeUpdate = document.getElementById("update-close");
 
 const handleUpdateBox = () => {

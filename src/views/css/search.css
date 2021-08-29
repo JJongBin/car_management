@@ -148,7 +148,7 @@ article #data-container table {
 }
 article #data-container table th {
     font-size: 20px;
-    padding: 15px 30px;
+    padding: 15px 20px;
     border-bottom: 2px solid rgba(0, 0, 0, 0.2);
     /* border-top: 1px solid rgba(0, 0, 0, 0.2); */
     /* background-color: rgb(210, 215, 220); */
@@ -194,7 +194,7 @@ article #data-container table tr .updatedTd {
 article #data-container table tr input:not([type=checkbox]) {
     all: unset;
     padding: 3px;
-    width: 200px;
+    width: 90%;
     height: 30px;
     border: 1.5px solid rgb(140, 140, 140);
     border-radius: 5px;
@@ -207,9 +207,20 @@ article #data-container table tr input:not([type=checkbox]) {
 
 
 /* UPDATE-BOX */
+#data-update-div {
+    padding: 20px 0;
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    right: 30px;
+    box-sizing: border-box;
+}
+article #update-box { 
+    width: 100%;
+}
 article #update-box .data-btn {
     margin: 20px 100px;
-    width: 200px;
+    min-width: 20%;
     border: none;
     color: #191919;
     font-weight: 600;
@@ -231,7 +242,7 @@ article #update-box .data-btn:last-child:hover {
     color: #191919;
 }
 #update-box {
-    position: relative;
+    /* position: relative; */
     width: 100%;
     /* height: 20%; */
     background-color:#191919;
