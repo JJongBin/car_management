@@ -23,11 +23,11 @@ export const home = (req, res) => {
   res.render("home2.ejs")
 }
 
-export const search = async (req, res) => {
-  const cars = await Car.find({});
-  // console.log(cars.history);
-  res.render("search.ejs", {datas: cars});
-}
+// export const search = async (req, res) => {
+//   const cars = await Car.find({});
+//   // console.log(cars.history);
+//   res.render("search.ejs", {datas: cars});
+// }
 
 export const postSearch = async (req, res) => {
   const {number, i_number, car_name, owner, phone} = req.body;
@@ -92,6 +92,26 @@ export const carUpdate = async (req, res) => {
   
   return res.redirect("/search");
 }
+
+export const search = async(req, res) => {
+  const { keyword } = req.query;
+  let cars = [];
+
+  if (keyword){
+    cars = await Car.find({
+      number: {
+        $regex: new RegExp(`.*${keyword}.*`, "i")  
+      },
+    })
+  } else {
+    cars = await Car.find({});
+  }
+  
+  res.render("search.ejs", {datas: cars});
+};
+
+
+
 
 
 export const parts = (req, res) => {
