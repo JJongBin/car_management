@@ -86,12 +86,20 @@
         <article>
             <section class="section-1">
                 <form id="search">
+                    <div id="category">
+                        <input type="radio" name="category" value="number" checked>차량번호
+                        <input type="radio" name="category" value="i_number">차대번호
+                        <input type="radio" name="category" value="car_name">차종
+                        <input type="radio" name="category" value="owner">차주
+                        <input type="radio" name="category" value="phone">연락처
+                    </div>
                     <input type="text" name="keyword" placeholder=" Search"/>
                     <button class="search-btn">
                         <a href="javascript:void(0)">
                             <i class="fas fa-search"></i>
                         </a>
                     </button>
+
                 </form>
             </section>
             

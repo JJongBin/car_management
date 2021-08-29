@@ -94,12 +94,13 @@ export const carUpdate = async (req, res) => {
 }
 
 export const search = async(req, res) => {
-  const { keyword } = req.query;
+  const { keyword, category } = req.query;
+  
   let cars = [];
 
   if (keyword){
     cars = await Car.find({
-      number: {
+      [category]: {
         $regex: new RegExp(`.*${keyword}.*`, "i")  
       },
     })

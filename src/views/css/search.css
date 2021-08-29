@@ -12,7 +12,7 @@ article .section-1 {
     margin: 30px auto;
     position: relative;
 }
-#search input {
+#search input:not(input[type="radio"]) {
     all: unset;
     border: 1px solid rgba(255, 255, 255, .2);
     border-radius: 5px;
@@ -22,6 +22,7 @@ article .section-1 {
     color: #fff;
     box-sizing: border-box;
     background-color: #000;
+    margin-bottom: 10px;
 }
 #search input::placeholder {
     color: #fff;
@@ -35,9 +36,18 @@ article .section-1 {
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.5);
     box-sizing: border-box;
-
 }
-
+#category {
+    min-width: 400px;
+    bottom: -20px;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    margin-left: -200px;
+}
+#category input{
+    margin-left: 15px;
+}
 
 
 #data-form {
