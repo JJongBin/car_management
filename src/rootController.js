@@ -63,7 +63,7 @@ export const carDelete = async (req, res) => {
     }
   }
   
-  const cars = await Car.find({});
+  // const cars = await Car.find({});
   return res.redirect("/search");
 }
 
