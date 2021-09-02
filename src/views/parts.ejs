@@ -129,11 +129,11 @@
                             </form>
                         </div>
                         <div class="data-addBox hide">
-                            <form id="data-add">
+                            <form id="data-add" method="POST">
                                 <div>
                                     <span>재고추가</span>
                                     <div class="addBtnBox">
-                                        <button class="btn">추가하기</button>
+                                        <button class="btn" >추가하기</button>
                                         <div class="close btn">Close</div>
                                     </div>
                                 </div>
@@ -155,6 +155,18 @@
                             <th>⊖</th>
                             <th>⊕</th>
     
+                            
+                            <% for(let i=0; i < datas.length ; i++){ %>
+                                <tr class="data">
+                                    <td><%=datas[i].car_name%></td>
+                                    <td><%=datas[i].part%></td>
+                                    <td><%=datas[i].price%></td>
+                                    <td><%=datas[i].lastday%></td>
+                                    <td><%=datas[i].num%></td>
+                                    <td><button>-</button></td>
+                                    <td><button>+</button></td>
+                                </tr>
+                            <% } %>
                             <tr>
                                 <td>렉스턴</td>
                                 <td>타이어</td>

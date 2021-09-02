@@ -121,10 +121,30 @@ export const search = async(req, res) => {
 
 
 
+export const postParts = async (req, res) => {
+  const {car_name, part, price, lastday, num} = req.body;
+  // console.log(car_name, part, price, lastday, num);
 
+  try {
+    const newPart = await Part.create({
+      car_name, 
+      part, 
+      price, 
+      lastday, 
+      num
+    });
+    // user.save();
+    return res.redirect("/parts");
+  }
+  catch(error){
+    console.log(error)
+    return res.status(400).redirect("/parts");
+  }
+}
 
-export const parts = (req, res) => {
-  res.render("parts.ejs");
+export const parts = async (req, res) => {
+  const parts = await Part.find();
+  res.render("parts.ejs", {datas: parts});
 }
 export const calendar = (req, res) => {
   res.render("calendar.ejs");
