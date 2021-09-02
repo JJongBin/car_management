@@ -7,6 +7,7 @@
 
     <!-- JS -->
     <script defer src="./js/time.js"></script>
+    <script defer src="./js/parts.js"></script>
     <script src="https://kit.fontawesome.com/818834dbf2.js" crossorigin="anonymous"></script>
 
     <!-- CSS 초기화 -->
@@ -112,12 +113,12 @@
             <section class="section-2">
                 <div class="part-searchBox">
                     <div class="part-btnBox">
-                        <button class="data-add-part">재고추가</button>
+                        <button class="openDataBtn">재고추가</button>
                     </div>
                     <div class="title">Parts Search</div>
     
                     <div class="searchPartsBox item">
-                        <div class="data-search hide">
+                        <div class="data-search">
                             <form id="searchParts">
                                 <input type="text" name="keyword" placeholder=" Search"/>
                                 <button class="searchParts-btn">
@@ -127,11 +128,14 @@
                                 </button>
                             </form>
                         </div>
-                        <div class="data-addBox">
+                        <div class="data-addBox hide">
                             <form id="data-add">
                                 <div>
                                     <span>재고추가</span>
-                                    <button>추가하기</button>
+                                    <div class="addBtnBox">
+                                        <button class="btn">추가하기</button>
+                                        <div class="close btn">Close</div>
+                                    </div>
                                 </div>
                                 <div>
                                     <input name="car_name" type="text" placeholder="차종">

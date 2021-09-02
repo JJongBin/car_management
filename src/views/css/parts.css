@@ -1,6 +1,25 @@
 button {
     all: unset;
 }
+.btn {
+    height: 30px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    padding: 0 10px;
+    line-height: 30px;
+    box-sizing: border-box;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    transition: all .3s;
+    margin: 0 5px;
+}
+.btn:hover {
+    background-color: #fff;
+    color: #212121;
+
+}
+
 .outOfStockBox {
     box-shadow: rgb(200 200 200) 0 0 15px;
     border-radius: 10px;
@@ -158,7 +177,7 @@ table tr td:nth-child(7) {
     box-sizing: border-box;
     height: 49px;
 }
-.part-btnBox .data-add-part {
+.part-btnBox .openDataBtn {
     height: 100%;
     border: 2px solid #fff;
     border-radius: 10px;
@@ -170,7 +189,7 @@ table tr td:nth-child(7) {
     cursor: pointer;
     transition: all .3s;
 }
-.part-btnBox .data-add-part:hover {
+.part-btnBox .openDataBtn:hover {
     background-color: #fff;
     color: #212121;
 }
@@ -192,7 +211,7 @@ table tr td:nth-child(7) {
     color: #fff;
     font-size: 17px;
 }
-#data-add div:first-child button{
+#data-add div:first-child .btn{
     height: 30px;
     border: 2px solid #fff;
     border-radius: 10px;
@@ -204,7 +223,7 @@ table tr td:nth-child(7) {
     cursor: pointer;
     transition: all .3s;
 }
-#data-add div:first-child button:hover {
+#data-add div:first-child .btn:hover {
     background-color: #fff;
     color: #212121;
 }
@@ -212,6 +231,9 @@ table tr td:nth-child(7) {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+#data-add div:last-child:last-child{
+
 }
 
 
