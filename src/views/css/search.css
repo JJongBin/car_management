@@ -138,6 +138,7 @@ article .section-2 {
 article #data-container {
     /* padding: 30px; */
     border-radius: 10px;
+    box-shadow: rgb(200 200 200) 0 0 15px;
 }
 article #data-container .btnBox{
     position: absolute;

@@ -1,5 +1,6 @@
 import Car from "./models/Car";
 import History from "./models/History";
+import Part from "./models/Part";
 
 
 // export const home = (req, res) => {

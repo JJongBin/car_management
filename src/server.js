@@ -6,6 +6,7 @@ import { localsMiddleware } from "./middlewares";
 import "./db";
 import Car from "./models/Car";
 import History from "./models/History";
+import Part from "./models/Part";
 import { home, search, postSearch, calendar, parts, carDelete, carUpdate } from "./rootController"
 
 const PORT = 4000

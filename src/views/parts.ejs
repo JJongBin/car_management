@@ -86,76 +86,100 @@
         <!-- MAIN CONTENTS -->
         <article>
             <section class="section-1">
-            
-                <div class="title">Out of Stocks Alret</div>
-                <ul id="outOfStockBox" class="item">
-                    <li class="stock">
-                        <div class="title">쇼바</div>
-                        <div class="num item">2</div>
-                    </li>
-                    <li class="stock">
-                        <div class="title">쇼바</div>
-                        <div class="num item">2</div>
-                    </li>
-                    <li class="stock">
-                        <div class="title">쇼바</div>
-                        <div class="num item">2</div>
-                    </li>
-                    <li class="stock">
-                        <div class="title">쇼바</div>
-                        <div class="num item">2</div>
-                    </li>
-                </ul>
+                <div class="outOfStockBox">
+                    <div class="title">Out of Stocks Alret</div>
+                    <ul id="outOfStock" class="item">
+                        <li class="stock">
+                            <div class="title">쇼바</div>
+                            <div class="num item">2</div>
+                        </li>
+                        <li class="stock">
+                            <div class="title">쇼바</div>
+                            <div class="num item">2</div>
+                        </li>
+                        <li class="stock">
+                            <div class="title">쇼바</div>
+                            <div class="num item">2</div>
+                        </li>
+                        <li class="stock">
+                            <div class="title">쇼바</div>
+                            <div class="num item">2</div>
+                        </li>
+                    </ul>
+                </div>
             </section>
             
             <section class="section-2">
-                <div class="title">Parts Search</div>
-                <div class="searchPartsBox item">
-                    <form id="searchParts">
-                        <input type="text" name="keyword" placeholder=" Search"/>
-                        <button class="searchParts-btn">
-                            <a href="javascript:void(0)">
-                                <i class="fas fa-search"></i>
-                            </a>
-                        </button>
-                    </form>
-                    <table>
-                        <th>차종</th>
-                        <th>이름</th>
-                        <th>가격</th>
-                        <th>재고</th>
-                        <th>마지막 사용일</th>
-                        <th>-</th>
-                        <th>+</th>
-
-                        <tr>
-                            <td>렉스턴</td>
-                            <td>타이어</td>
-                            <td>30,000</td>
-                            <td>2</td>
-                            <td>2021-08-31</td>
-                            <td><button></button></td>
-                            <td><button></button></td>
-                        </tr>
-                        <tr>
-                            <td>렉스턴</td>
-                            <td>타이어</td>
-                            <td>30,000</td>
-                            <td>2</td>
-                            <td>2021-08-31</td>
-                            <td><button></button></td>
-                            <td><button></button></td>
-                        </tr>
-                        <tr>
-                            <td>렉스턴</td>
-                            <td>타이어</td>
-                            <td>30,000</td>
-                            <td>2</td>
-                            <td>2021-08-31</td>
-                            <td><button></button></td>
-                            <td><button></button></td>
-                        </tr>
-                    </table>
+                <div class="part-searchBox">
+                    <div class="part-btnBox">
+                        <button class="data-add-part">재고추가</button>
+                    </div>
+                    <div class="title">Parts Search</div>
+    
+                    <div class="searchPartsBox item">
+                        <div class="data-search hide">
+                            <form id="searchParts">
+                                <input type="text" name="keyword" placeholder=" Search"/>
+                                <button class="searchParts-btn">
+                                    <a href="javascript:void(0)">
+                                        <i class="fas fa-search"></i>
+                                    </a>
+                                </button>
+                            </form>
+                        </div>
+                        <div class="data-addBox">
+                            <form id="data-add">
+                                <div>
+                                    <span>재고추가</span>
+                                    <button>추가하기</button>
+                                </div>
+                                <div>
+                                    <input name="car_name" type="text" placeholder="차종">
+                                    <input name="part" type="text" placeholder="이름">
+                                    <input name="price" type="text" placeholder="가격">
+                                    <input name="lastday" type="text" placeholder="마지막사용일">
+                                    <input name="num" type="text" placeholder="재고수량">
+                                </div>
+                            </form>
+                        </div>
+                        <table>
+                            <th>차종</th>
+                            <th>이름</th>
+                            <th>가격</th>
+                            <th>마지막 사용일</th>
+                            <th>재고</th>
+                            <th>⊖</th>
+                            <th>⊕</th>
+    
+                            <tr>
+                                <td>렉스턴</td>
+                                <td>타이어</td>
+                                <td>30,000</td>
+                                <td>2021-08-31</td>
+                                <td>2</td>
+                                <td><button class="add-part">-</button></td>
+                                <td><button class="del-part">+</button></td>
+                            </tr>
+                            <tr>
+                                <td>렉스턴</td>
+                                <td>타이어</td>
+                                <td>30,000</td>
+                                <td>2021-08-31</td>
+                                <td>2</td>
+                                <td><button>-</button></td>
+                                <td><button>+</button></td>
+                            </tr>
+                            <tr>
+                                <td>렉스턴</td>
+                                <td>타이어</td>
+                                <td>30,000</td>
+                                <td>2021-08-31</td>
+                                <td>2</td>
+                                <td><button>-</button></td>
+                                <td><button>+</button></td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
                 
             </section>
