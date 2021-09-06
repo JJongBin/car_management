@@ -97,7 +97,7 @@ export const carUpdate = async (req, res) => {
 export const search = async(req, res) => {
   const { keyword, category } = req.query;
   let cars = [];
-
+  console.log(keyword, category)
   if (keyword){
     if (category) {
       cars = await Car.find({
@@ -143,9 +143,21 @@ export const postParts = async (req, res) => {
 }
 
 export const parts = async (req, res) => {
-  const parts = await Part.find();
-  res.render("parts.ejs", {datas: parts});
+  const { keyword } = req.query;
+
+  if (keyword === undefined) {
+    const parts = await Part.find();
+    res.render("parts.ejs", {datas: parts});
+  } else {
+    const parts = await Part.find({
+      part: {
+        $regex: new RegExp(`.*${keyword}.*`, "i")  
+      },
+    });
+    res.render("parts.ejs", {datas: parts});
+  }
 }
+
 export const calendar = (req, res) => {
   res.render("calendar.ejs");
 }

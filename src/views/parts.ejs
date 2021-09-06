@@ -152,8 +152,8 @@
                             <th>가격</th>
                             <th>마지막 사용일</th>
                             <th>재고</th>
-                            <th>⊖</th>
-                            <th>⊕</th>
+                            <th><i class="fas fa-chevron-down"></i></th>
+                            <th><i class="fas fa-chevron-up"></i></th>
     
                             
                             <% for(let i=0; i < datas.length ; i++){ %>
@@ -163,37 +163,10 @@
                                     <td><%=datas[i].price%></td>
                                     <td><%=datas[i].lastday%></td>
                                     <td><%=datas[i].num%></td>
-                                    <td><button>-</button></td>
-                                    <td><button>+</button></td>
+                                    <td><button><i class="fas fa-chevron-down"></i></button></td>
+                                    <td><button><i class="fas fa-chevron-up"></i></button></td>
                                 </tr>
                             <% } %>
-                            <tr>
-                                <td>렉스턴</td>
-                                <td>타이어</td>
-                                <td>30,000</td>
-                                <td>2021-08-31</td>
-                                <td>2</td>
-                                <td><button class="add-part">-</button></td>
-                                <td><button class="del-part">+</button></td>
-                            </tr>
-                            <tr>
-                                <td>렉스턴</td>
-                                <td>타이어</td>
-                                <td>30,000</td>
-                                <td>2021-08-31</td>
-                                <td>2</td>
-                                <td><button>-</button></td>
-                                <td><button>+</button></td>
-                            </tr>
-                            <tr>
-                                <td>렉스턴</td>
-                                <td>타이어</td>
-                                <td>30,000</td>
-                                <td>2021-08-31</td>
-                                <td>2</td>
-                                <td><button>-</button></td>
-                                <td><button>+</button></td>
-                            </tr>
                         </table>
                     </div>
                 </div>
