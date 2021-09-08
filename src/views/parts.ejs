@@ -163,8 +163,8 @@
                                     <td><%=datas[i].price%></td>
                                     <td><%=datas[i].lastday%></td>
                                     <td><%=datas[i].num%></td>
-                                    <td><button><i class="fas fa-chevron-down"></i></button></td>
-                                    <td><button><i class="fas fa-chevron-up"></i></button></td>
+                                    <td><button data-id=<%=datas[i]._id%> data-btn="-"><i data-id=<%=datas[i]._id%> data-btn="-" class="fas fa-chevron-down"></i></button></td>
+                                    <td><button data-id=<%=datas[i]._id%> data-btn="+"><i data-id=<%=datas[i]._id%> data-btn="+" class="fas fa-chevron-up"></i></button></td>
                                 </tr>
                             <% } %>
                         </table>
