@@ -26,15 +26,13 @@ addPartBtn.addEventListener("click", handleaddPartBtn)
 // 재고 증감
 const table = document.querySelector("table");
 
-
 const PartChange = async(e) => {
     e.preventDefault();
     if (e.target !== e.currentTarget) {
-        if (e.target.dataset.btn === "+"){
+        if (e.target.dataset.btn === "+" || e.target.dataset.btn === "-"){
             const targetId = e.target.dataset.id;
             const targetData = e.target.dataset.btn;
-            console.log(targetId)
-            console.log("data plus")
+            // console.log(targetId)
             const response = await fetch(`/parts/${targetId}/change`, {
                 method: "POST",
                 headers: {
@@ -42,13 +40,8 @@ const PartChange = async(e) => {
                 },
                 body: JSON.stringify({ targetData }),
             });
-
-
-        } else if (e.target.dataset.btn === "-"){
-            console.log("data minus")
-        }
+        } 
     }
 }
 
-
-table.addEventListener("click", PartChange)
+table.addEventListener("click", PartChange);

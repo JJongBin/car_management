@@ -164,9 +164,22 @@ export const calendar = (req, res) => {
 
 
 export const postPartChange = async (req, res) => {
-  const {body: { targetData }, params: {id}} = req
-  console.log(targetData, id)
-  // res.redirect("/parts");
+  const {body: { targetData }, params: {id}} = req;
+  // console.log(targetData, id);
+  if (targetData === "+") {
+    const parts = await Part.findById(id);
+    parts.num
+    await Part.findByIdAndUpdate(id, {
+      num: parts.num + 1
+    })
+  } else if (targetData === "-") {
+    const parts = await Part.findById(id);
+    parts.num
+    await Part.findByIdAndUpdate(id, {
+      num: parts.num - 1
+    })
+  }
+
 }
 
 // export const createComment = async (req, res) => {
