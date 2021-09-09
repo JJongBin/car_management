@@ -180,6 +180,7 @@ article {
     box-sizing: border-box;
     overflow: hidden;
     /* background-color: rgb(245, 245, 245); */
+    /* max-height: calc(100%); */
 }  
 
 article section {

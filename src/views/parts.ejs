@@ -89,24 +89,16 @@
             <section class="section-1">
                 <div class="outOfStockBox">
                     <div class="title">Out of Stocks Alret</div>
-                    <ul id="outOfStock" class="item">
-                        <li class="stock">
-                            <div class="title">쇼바</div>
-                            <div class="num item">2</div>
-                        </li>
-                        <li class="stock">
-                            <div class="title">쇼바</div>
-                            <div class="num item">2</div>
-                        </li>
-                        <li class="stock">
-                            <div class="title">쇼바</div>
-                            <div class="num item">2</div>
-                        </li>
-                        <li class="stock">
-                            <div class="title">쇼바</div>
-                            <div class="num item">2</div>
-                        </li>
-                    </ul>
+                    <div class="outOfStocks item">
+                        <ul id="outOfStock">
+                            <% for(let i=0; i < outStocks.length ; i++){ %>
+                                <li class="stock">
+                                    <div class="title"><%=outStocks[i].part%></div>
+                                    <div class="num item"><%=outStocks[i].num%></div>
+                                </li>
+                            <% } %>
+                        </ul>
+                    </div>
                 </div>
             </section>
             
@@ -146,28 +138,34 @@
                                 </div>
                             </form>
                         </div>
-                        <table>
-                            <th>차종</th>
-                            <th>이름</th>
-                            <th>가격</th>
-                            <th>마지막 사용일</th>
-                            <th>재고</th>
-                            <th><i class="fas fa-chevron-down"></i></th>
-                            <th><i class="fas fa-chevron-up"></i></th>
-    
-                            
-                            <% for(let i=0; i < datas.length ; i++){ %>
-                                <tr class="data">
-                                    <td><%=datas[i].car_name%></td>
-                                    <td><%=datas[i].part%></td>
-                                    <td><%=datas[i].price%></td>
-                                    <td><%=datas[i].lastday%></td>
-                                    <td><%=datas[i].num%></td>
-                                    <td><button data-id=<%=datas[i]._id%> data-btn="-"><i data-id=<%=datas[i]._id%> data-btn="-" class="fas fa-chevron-down"></i></button></td>
-                                    <td><button data-id=<%=datas[i]._id%> data-btn="+"><i data-id=<%=datas[i]._id%> data-btn="+" class="fas fa-chevron-up"></i></button></td>
-                                </tr>
-                            <% } %>
-                        </table>
+                        <div class="tableBox">
+
+                            <table>
+                                <thead>
+                                    <th>차종</th>
+                                    <th>이름</th>
+                                    <th>가격</th>
+                                    <th>마지막 사용일</th>
+                                    <th>재고</th>
+                                    <th><i class="fas fa-chevron-down"></i></th>
+                                    <th><i class="fas fa-chevron-up"></i></th>
+                                </thead>
+        
+                                <tbody>
+                                    <% for(let i=0; i < datas.length ; i++){ %>
+                                        <tr class="data">
+                                            <td><%=datas[i].car_name%></td>
+                                            <td><%=datas[i].part%></td>
+                                            <td><%=datas[i].price%></td>
+                                            <td><%=datas[i].lastday%></td>
+                                            <td><%=datas[i].num%></td>
+                                            <td><button data-id=<%=datas[i]._id%> data-btn="-"><i data-id=<%=datas[i]._id%> data-btn="-" class="fas fa-chevron-down"></i></button></td>
+                                            <td><button data-id=<%=datas[i]._id%> data-btn="+"><i data-id=<%=datas[i]._id%> data-btn="+" class="fas fa-chevron-up"></i></button></td>
+                                        </tr>
+                                    <% } %>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
                 

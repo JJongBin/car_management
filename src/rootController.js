@@ -144,17 +144,18 @@ export const postParts = async (req, res) => {
 
 export const parts = async (req, res) => {
   const { keyword } = req.query;
-
+  const outStock = await Part.find({num:{$lt:3}});
+  // console.log(outStock);
   if (keyword === undefined) {
     const parts = await Part.find();
-    res.render("parts.ejs", {datas: parts});
+    res.render("parts.ejs", {datas: parts, outStocks: outStock});
   } else {
     const parts = await Part.find({
       part: {
         $regex: new RegExp(`.*${keyword}.*`, "i")  
       },
     });
-    res.render("parts.ejs", {datas: parts});
+    res.render("parts.ejs", {datas: parts, outStocks: outStock});
   }
 }
 

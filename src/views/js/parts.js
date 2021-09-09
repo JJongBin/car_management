@@ -27,7 +27,6 @@ addPartBtn.addEventListener("click", handleaddPartBtn)
 const table = document.querySelector("table");
 const PartChange = async(e) => {
     // e.preventDefault();
-
     if (e.target !== e.currentTarget) {
         if (e.target.dataset.btn === "+" || e.target.dataset.btn === "-"){
             check = window.confirm("재고 수량을 변경하시겠습니까?");

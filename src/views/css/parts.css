@@ -24,13 +24,17 @@ button {
     box-shadow: rgb(200 200 200) 0 0 15px;
     border-radius: 10px;
 }
-#outOfStock {
+.outOfStockBox .outOfStocks {
     width: 100%;
-    /* height: 300px; */
+    height: 120px;
     padding: 20px 15px;
     box-sizing: border-box;
+    overflow: auto;
+}
+#outOfStock {
     display: grid;
     column-gap: 15px;
+    row-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     border-radius: 0 0 10px 10px;
     
@@ -125,20 +129,29 @@ section .searchPartsBox {
     box-sizing: border-box;
 }
 
+
+.tableBox{
+    width: 100%;
+    max-height: 440px;
+    margin-top: 20px;
+    overflow: auto;
+
+}
 table {
     border-radius: 10px;
     width: 100%;
     max-height: 600px;
-    margin-top: 20px;
     border: 1px solid rgba(0, 0, 0, 0.15);
     column-gap: 30px;
 }
 
 table th {
-    font-size: 20px;
+    font-size: 18px;
     padding: 10px 20px;
     background-color: #212121;
     color: #fff;
+    position: sticky;
+    top: -1px;
 }
 
 table th:nth-child(4) {
@@ -152,8 +165,8 @@ table th:nth-child(7) {
     width: 5%;
 }
 
-table tr {
-    
+table tbody{
+    /* width: 100%; */
 }
 table tr td {
     text-align: center;
