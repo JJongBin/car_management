@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- JS -->
+    <script defer src="./js/time.js"></script>
+    <script defer src="./js/calendar.js"></script>
+    <script src="https://kit.fontawesome.com/818834dbf2.js" crossorigin="anonymous"></script>
+
+    <!-- CSS 초기화 -->
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/base.css" />
+    <link rel="stylesheet" href="./css/calendar.css" />
+    <link rel="stylesheet" href="./css/header-search.css" />
+
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+</head>
+<body>
+    <div class="container">
+        
+        <!-- MAIN MENU -->
+        <header>
+            <div class="logo">
+                <!-- <img src="" alt="logo"> -->
+                <span>Management</span>
+            </div>
+                <form id="search">
+                    <input type="text" name="keyword" placeholder=" Search" />
+                    <button class="search-btn" formaction="/search">
+                        <a href="javascript:void(0)">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </button>
+                </form>
+        </header>
+
+
+        <!-- NAV -->
+        <nav>
+            <div class="menu">
+                <ul class="main-menu">
+                    <li>
+                        <a href="/"><i class="fas fa-home"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/search">
+                            <i class="fas fa-search"></i>
+                            검색
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/parts">
+                            <i class="fas fa-th-large"></i>
+                            재고관리
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/calendar">
+                            <i class="far fa-calendar-alt"></i>
+                            일정관리
+                        </a>
+                    </li>
+                </ul>
+                
+                
+                <div id="time">
+                    <p>0000-00-00</p>
+                    <div class="clock">
+                        <p>AM </p>
+                        <p>00:00</p>
+                    </div>
+                </div>
+                    
+                
+
+            </div>
+        </nav>
+        
+
+        <!-- MAIN CONTENTS -->
+        <article>
+            <section class="section-1">
+                <div class="calender">
+                    <div class="calender-month item">
+                        <div class="control-month">
+                            <span class="material-icons prev">chevron_left</span>
+                            <span class="month"></span>
+                            <span class="material-icons next">chevron_right</span>
+                        </div>
+                        <div class="calender-head">
+                            <div class="date-week">Sun</div>
+                            <div class="date-week">Mon</div>
+                            <div class="date-week">Tus</div>
+                            <div class="date-week">Wed</div>
+                            <div class="date-week">Thu</div>
+                            <div class="date-week">Fri</div>
+                            <div class="date-week">Sat</div>
+                        </div>
+                        <div class="calender-main">
+                            <div class="dates"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-2">
+                <div class="scheduleBox item">
+                    <div class="title">
+                        Today Schedule
+                    </div>
+                    <table>
+                        <th>시간</th>
+                        <th>차량</th>
+                        <th>내용</th>
+                        <th>차주</th>
+                        <th>연락처</th>
+
+                        <tr>
+                            <td><input type="time" step="1800000"></td>
+                            <td>렉스턴</td>
+                            <td>쇽업쇼바</td>
+                            <td>종빈</td>
+                            <td>000-0000-0000</td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+
+
+
+        </article>
+        <div id="todayBtn">
+            <i class="far fa-calendar-alt"></i>
+        </div>
+    </div>
+</body>
+</html>

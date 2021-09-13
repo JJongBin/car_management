@@ -120,3 +120,27 @@ nextMonth.addEventListener("click", function() {
     getDateItem(year, month);
 })
 
+
+
+
+
+// DETAILS
+
+const handleDetail = (event) => {
+    console.log(event.target.innerText);
+    if(!click_event.classList.contains("click-detail")){
+        click_event.classList.add("click-detail")
+    }
+    if(show_detail.classList.contains("hide")){
+        show_detail.classList.remove("hide")
+    }
+}
+
+const dates_click = document.querySelector(".dates");
+const show_detail = document.querySelector(".details");
+const click_event = document.getElementById("calender-event");
+
+dates_click.addEventListener("click", handleDetail);
+
+
+
