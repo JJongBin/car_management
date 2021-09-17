@@ -197,28 +197,40 @@
                 </div>
             </section>
 
-            <!-- <section class="section-2">
-                <div class="scheduleBox item">
-                    <div class="title">
-                        Today Schedule
-                    </div>
-                    <table>
-                        <th>시간</th>
+
+            <section class="section-2">
+                <div class="scheduleBox">
+                    <div id="data-form">
+                        <button id="add-close-btn">Close</button>
+                        <form method="POST">
+                            <div>
+                                <span>Add Schedule</span>
+                                <div>
+                                    <button>추가하기</button>
+                                </div>
+                            </div>
+                            <div>
+                                <input name="date", placeholder="현재날짜", required, type="text" />
+                                <input name="time", placeholder="시간", required, type="text" />
+                                <input name="car_name", placeholder="차종", required, type="text" />
+                                <input name="owner", placeholder="차주", type="text" />
+                                <input name="phone", placeholder="연락처", type="text" />
+                            </div>
+                            <!-- <div class="span-label"><p>상세 내용</p></div> -->
+                            <div class="description">
+                                <textarea name="description" placeholder="상세내용"></textarea>
+                            </div>
+
+                            <!-- th>시간</th>
                         <th>차량</th>
                         <th>내용</th>
                         <th>차주</th>
-                        <th>연락처</th>
+                        <th>연락처</th -->
 
-                        <tr>
-                            <td><input type="time" step="1800000"></td>
-                            <td>렉스턴</td>
-                            <td>쇽업쇼바</td>
-                            <td>종빈</td>
-                            <td>000-0000-0000</td>
-                        </tr>
-                    </table>
+                        </form>
+                    </div>
                 </div>
-            </section> -->
+            </section>
 
 
 
