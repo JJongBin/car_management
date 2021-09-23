@@ -130,9 +130,13 @@ const handleDetail = (event) => {
     console.log(event.target.innerText);
     if(!click_event.classList.contains("click-detail")){
         click_event.classList.add("click-detail")
+    } else {
+        click_event.classList.remove("click-detail")
     }
     if(show_detail.classList.contains("hide")){
         show_detail.classList.remove("hide")
+    } else {
+        show_detail.classList.add("hide")
     }
 }
 
@@ -143,4 +147,7 @@ const click_event = document.getElementById("calender-event");
 dates_click.addEventListener("click", handleDetail);
 
 
+// DETAILS CLOSE
+const detailsClose = document.querySelector(".detailsClose");
+detailsClose.addEventListener("click", handleDetail)
 
