@@ -69,6 +69,7 @@ header {
     z-index: 10;
     
 }
+
 header .logo {
     font-size: 25px;
     /* text-decoration: underline;
@@ -82,10 +83,13 @@ header .logo {
     align-items: center;
     box-sizing: border-box;
     padding: 15px;
+    padding-left: 0;
     /* background-color: #000; */
     /* border-radius: 10px;
     border: 2px solid rgba(255, 255, 255, 0.15); */
-    
+}
+header .logo > img{
+    padding-right: 10px;
 }
 
 

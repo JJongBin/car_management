@@ -41,10 +41,10 @@ article .section-1 .calender{
 }
 article .section-1 .calender .calender-month{
     width: 100%;
-    border-radius: 30px 30px 0 0;
+    border-radius: 20px 20px 0 0;
 }
 article .section-1 .calender .calender-month .control-month{
-    border-radius: 30px 30px 0 0;
+    border-radius: 20px 20px 0 0;
     display: flex;
     position: relative;
     width: 100%;
@@ -165,17 +165,41 @@ article .section-1 .calender .calender-month .calender-main .dates .date.other p
 
 article .section-1 .details{
     border-radius: 20px 20px 0 0;
-
+    box-shadow: rgb(200 200 200) 0 0 15px;
 }
 article .section-1 .details .title{
-    text-align: center;
-    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
     font-weight: 500;
     padding: 10px;
     background-color: rgb(32, 32, 32);
     color: #fff;
     border-radius: 20px 20px 0 0;
+    height: 60px;
+    box-sizing: border-box;
+    position: relative;
 }
+article .section-1 .details .title .detailsClose{
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    font-size: 20px;
+    color: rgb(240, 240, 240);
+    margin-top: -15px;
+    border-radius: 5px;
+    background-color: rgb(50, 50, 50);
+    padding: 5px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: all .2s;
+}
+article .section-1 .details .title .detailsClose:hover{
+    background-color: rgb(240, 240, 240);
+    color: #000;
+}
+
 article .section-1 .details .worksBox{
     padding: 10px;
     overflow: auto;
@@ -184,28 +208,48 @@ article .section-1 .details .worksBox{
 }
 article .section-1 .details .worksBox .work{
     border: 1px solid rgba(0, 0, 0, 0.15);
-    border-top: none;
-    padding: 0 5px 5px 5px;
+    /* border: 1px solid skyblue;s */
+    /* border-top: none; */
+    border-radius: 5px;
+    /* padding: 0 5px 5px 5px; */
+    padding-bottom: 5px;
     position: relative;
-    margin: 20px 0;
-    
-    
+    margin: 20px 0 30px 0;
+    cursor: pointer;
+    transition: all .2s;
 }
+article .section-1 .details .worksBox .work:hover{
+    background-color: rgba(50, 150, 200, .7);
+    color: #fff;
+    border: 1px solid rgba(50, 150, 250, 1);
+}
+
 article .section-1 .details .worksBox .work .flexBox{
     display: flex;
     justify-content: space-around;
     margin-bottom: 10px;
 }
 article .section-1 .details .worksBox .work .flexBox:first-child{
-    background-color: rgb(50, 150, 200);
+    background-color: rgba(50, 150, 200, .8);
     padding: 3px;
     margin-bottom: 15px;
-    border-radius: 5px;
+    border-radius: 5px 5px 0 0;
     box-sizing: border-box;
+    justify-content: space-between;
     color: #fff;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+article .section-1 .details .worksBox .work .flexBox:first-child div{
+    padding: 5px 10px;
+}
+article .section-1 .details .worksBox .work .flexBox:nth-child(2){
+    font-size: 1.2em;
+    margin-bottom: 20px;
 }
 article .section-1 .details .worksBox .work .flexBox:last-child{
     margin-bottom: 5px;
+    padding: 0 10px;
 }
 /* article .section-1 .details .worksBox .work .time{
 } */
@@ -237,4 +281,17 @@ article .section-2 .scheduleBox{
 #data-form form .description textarea{
     width: calc(130px + 75%);
     margin: 10px;
+    background-color: #000;
+    resize: none;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    font-size: 16px;
+    padding: 5px;
+}
+#data-form form .description textarea::placeholder{
+    color: #fff;
+    padding: 5px;
+}
+#data-form form .description textarea:focus{
+    outline: none;
 }
